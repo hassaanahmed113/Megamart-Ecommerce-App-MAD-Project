@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Megamart</string>
+    <string name="like">Like</string>
+    <string name="JordanDesciption">Air Jordan is a line of basketball shoes and athletic clothing produced by American corporation Nike. The first Air Jordan shoe was produced for Hall of Fame former basketball player Michael Jordan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

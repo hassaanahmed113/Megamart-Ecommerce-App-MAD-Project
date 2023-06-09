@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cart_background"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="10dp"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ivCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/grayishWhite"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/ivCartProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shoe3" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvCartProductName"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nike Predator"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivCardView"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/tvCartProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textStyle="bold"
+        android:textColor="@color/darkblue"
+        app:layout_constraintStart_toStartOf="@id/tvCartProductName"
+        app:layout_constraintTop_toBottomOf="@id/tvCartProductName" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tvCartProductPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvCartProductPrice" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/delete"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/ivCardView"
+        app:layout_constraintTop_toBottomOf="@+id/tvSize"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvCartProductSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07"
+        android:textColor="@color/black"
+        android:layout_marginStart="3dp"
+        app:layout_constraintTop_toTopOf="@id/tvSize"
+        app:layout_constraintStart_toEndOf="@id/tvSize"
+        app:layout_constraintBottom_toBottomOf="@id/tvSize" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/guideline6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCartItemAdd"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/plus"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/tvCartItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="01"
+            android:layout_marginStart="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/btnCartItemMinus"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/minus"
+
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2991914" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="280dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

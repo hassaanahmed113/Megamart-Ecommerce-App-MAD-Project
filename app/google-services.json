@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054978451074",
+    "project_id": "megamartapp-696a3",
+    "storage_bucket": "megamartapp-696a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054978451074:android:69a93494df49b6f51ab69b",
+        "android_client_info": {
+          "package_name": "com.example.megamartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054978451074-vafmq82n8o27t3jt9k9si9mismn7896a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8JzJJMr0RK01YmmaXYu6bxtZoTjwjuVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054978451074-vafmq82n8o27t3jt9k9si9mismn7896a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:text="Sign Up"
+        android:textColor="@color/darkblue"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_below="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="Let's Get Started!"
+        android:textColor="@color/lightblack1"
+        android:textSize="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/container_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textColor="@color/lightblack1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignIn"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignIn" />
+        <EditText
+            android:id="@+id/etNameSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints="name"
+            android:background="@color/grayishWhite"
+            android:ems="10"
+            android:hint="Enter your name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightblack"
+            android:textSize="21dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/etEmailSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:text="Email"
+            android:textColor="@color/lightblack1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignIn"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignIn" />
+        <EditText
+            android:id="@+id/etEmailSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints="emailAddress"
+            android:background="@color/grayishWhite"
+            android:ems="10"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightblack"
+            android:textSize="21dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/etPasswordSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/etNameSignUp"
+            app:layout_constraintStart_toStartOf="@+id/etNameSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/etNameSignUp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:text="Password"
+            android:textColor="@color/lightblack1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignIn"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignIn" />
+        <EditText
+            android:id="@+id/etPasswordSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints="password"
+            android:background="@color/grayishWhite"
+            android:ems="10"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightblack"
+            android:textSize="21dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etEmailSignUp"
+            app:layout_constraintStart_toStartOf="@+id/etEmailSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/etEmailSignUp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Already have an account?  "
+            android:textColor="@color/lightblack1"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignIn"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignIn" />
+
+        <TextView
+            android:id="@+id/tvNavigateToSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Log in"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignUp"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignUp" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tvNavigateToSignIn"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
