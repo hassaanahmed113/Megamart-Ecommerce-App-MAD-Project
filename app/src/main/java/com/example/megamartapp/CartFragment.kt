@@ -145,24 +145,72 @@ class CartFragment : Fragment(R.layout.fragment_cartpage), CartAdapter.OnClickRe
     }
 
     override fun onQuantityIncreased(item: CartModel, position: Int) {
-        // Handle quantity increase logic
         val currentItem = cartList[position]
         currentItem.quantity = currentItem.quantity?.plus(1)
         totalPrice += currentItem.price!!.toInt()
         binding.tvLastTotalPrice.text = "Rs. ${totalPrice.toString()}"
         adapter.notifyItemChanged(position)
+
+        // Check if the document exists for the item in the database
+        orderDatabaseReference
+            .whereEqualTo("uid", item.uid)
+            .whereEqualTo("pid", item.pid)
+            .whereEqualTo("size", item.size)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val documentId = querySnapshot.documents[0].id
+                    orderDatabaseReference.document(documentId).set(currentItem)
+                        .addOnSuccessListener {
+                        }
+                        .addOnFailureListener {
+                        }
+                } else {
+                    orderDatabaseReference.add(currentItem)
+                        .addOnSuccessListener {
+                        }
+                        .addOnFailureListener {
+                        }
+                }
+            }
+            .addOnFailureListener {
+            }
     }
 
     override fun onQuantityDecreased(item: CartModel, position: Int) {
-        // Handle quantity decrease logic
         val currentItem = cartList[position]
         if (currentItem.quantity!! > 1) {
             currentItem.quantity = currentItem.quantity!! - 1
             totalPrice -= currentItem.price!!.toInt()
             binding.tvLastTotalPrice.text = "Rs. ${totalPrice.toString()}"
             adapter.notifyItemChanged(position)
-        } else {
 
+            // Check if the document exists for the item in the database
+            orderDatabaseReference
+                .whereEqualTo("uid", item.uid)
+                .whereEqualTo("pid", item.pid)
+                .whereEqualTo("size", item.size)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    if (!querySnapshot.isEmpty) {
+
+                        val documentId = querySnapshot.documents[0].id
+                        orderDatabaseReference.document(documentId).set(currentItem)
+                            .addOnSuccessListener {
+
+                            }
+                            .addOnFailureListener {
+
+                            }
+                    } else {
+                        orderDatabaseReference.add(currentItem)
+                            .addOnSuccessListener {
+                            }
+                    }
+                }
+                .addOnFailureListener {
+                }
+        } else {
             requireActivity().toast("Minimum quantity of 1 is required")
         }
     }
