@@ -7,4 +7,4 @@ Hassaan Ahmed (60211) Group Leader\
 Hafsa Amin (60209)\
 Aneeq Ahmed (54365)\
 Areeba Kanwal (54338)\
-Zohaib Habib (31820)\
+Zohaib Habib (31820)
