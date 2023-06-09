@@ -151,7 +151,7 @@ class CartFragment : Fragment(R.layout.fragment_cartpage), CartAdapter.OnClickRe
         binding.tvLastTotalPrice.text = "Rs. ${totalPrice.toString()}"
         adapter.notifyItemChanged(position)
 
-
+        // Check if the document exists for the item in the database
         orderDatabaseReference
             .whereEqualTo("uid", item.uid)
             .whereEqualTo("pid", item.pid)
@@ -185,7 +185,7 @@ class CartFragment : Fragment(R.layout.fragment_cartpage), CartAdapter.OnClickRe
             binding.tvLastTotalPrice.text = "Rs. ${totalPrice.toString()}"
             adapter.notifyItemChanged(position)
 
-
+            // Check if the document exists for the item in the database
             orderDatabaseReference
                 .whereEqualTo("uid", item.uid)
                 .whereEqualTo("pid", item.pid)
